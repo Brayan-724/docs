@@ -1,32 +1,32 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Densky Framework",
   "logo": {
     "dark": "https://github.com/Densky-Framework/densky/raw/main/.github/logo-720px.png",
     "light": "https://github.com/Densky-Framework/densky/raw/main/.github/logo-720px.png"
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#9563FF",
-    "light": "#AE87FF",
-    "dark": "#0D001D",
+    "primary": "#ff6423",
+    "light": "#ff6423",
+    "dark": "#0c1421",
     "background": {
-      "dark": "#090014"
+      "dark": "#0c1421"
     },
     "anchors": {
       "from": "#FF7F57",
-      "to": "#9563FF"
+      "to": "#ff6423"
     }
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Trello",
+      "url": "https://trello.com/b/8y20oRHW/densky-framework"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "type": "github",
+    "url": "https://github.com/Densky-Framework/densky"
   },
   "tabs": [
     {
@@ -36,59 +36,40 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Github",
+      "icon": "github",
+      "url": "https://github.com/Densky-Framework"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "Trello",
+      "icon": "trello",
+      "url": "https://trello.com/b/8y20oRHW/densky-framework"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
+        "overview",
         "quickstart",
-        "development"
+        "first-file"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Routing",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation"
+        "routing/overview"
       ]
     },
     {
       "group": "API Documentation",
       "pages": [
-        "api-reference/authentication"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/soon"
       ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "github": "https://github.com/Densky-Framework",
+    "youtube": "https://youtube.com/@apika_luca"
   }
 }

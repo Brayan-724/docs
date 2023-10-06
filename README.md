@@ -1,30 +1,41 @@
-# Mintlify Starter Kit
+# Densky Documentation
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
+![Desktop Screenshot](.github/screenshot-desktop.png)
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+## Development
 
-### Development
+This documentation is made with Mintlify, so you need to install their [CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. You can install it via:
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
-
-```
+```bash
 npm i -g mintlify
+# With volta:
+volta install mintlify
 ```
 
-Run the following command at the root of your documentation (where mint.json is)
+Run the following command at the root:
 
-```
+```bash
 mintlify dev
 ```
 
-### Publishing Changes
+## Contribute
 
-Install our Github App to autopropagate changes from youre repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
+The contribution must follow the following rules:
+
+- `Be clear` Any confuse on your writing may cause a problem, please avoid them.
+- `Discussion -> Issue -> PR` Try to follow this roadmap for any feature purpose. If you found a bug or misspelling, you may skip the discussion step and go directly to opening an issue.
+- `Check spelling` We're humans, so you should use some language tool to avoid misspelling.
+
+The route tree is writing with a code block and `diff` highlight:
+```
+\`\`\`diff
+  routes
++ | _index.ts
+\`\`\`
+```
+
+> Indent is `|` and one space.
+
 
 #### Troubleshooting
 

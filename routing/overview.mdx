@@ -1,0 +1,76 @@
+---
+title: Routing
+sidebarTitle: Overview
+description: 'The route system is based on the following conventions and rules'
+---
+
+```diff
+routes
+| sub-route
+| | _index.ts
+| | _middleware.ts
+| | _fallback.ts
+| | _ignored.ts
+| | sub-sub-route.ts
+| _index.ts
+| _middleware.ts
+| _fallback.ts
+| _ignored.ts
+```
+
+## Conventions and rules
+
+### `_index.ts`
+This will take the parent route and set itself as leaf.
+
+The following tree will create a conflict at the router resolve:
+
+```diff
+  routes
+  | sub
+- | | _index.ts
+- | sub.ts
+```
+
+`/sub/_index.ts` and `/sub.ts` are the same `/sub`.
+
+### `_middleware.ts`
+This will make a middleware in the route context.
+
+```diff
+  routes
+  | sub
+  | | route.ts
+  | _index.ts
++ | _middleware.ts
+```
+
+When the user enter on `/sub/route` or `/`, the middleware on the root will be activated.
+
+### `_fallback.ts`
+This will set a fallback in the route context.
+
+```diff
+  routes
+  | sub
+  | | route.ts
++ | | _fallback.ts
+  | _index.ts
++ | _fallback.ts
+```
+
+If the user enters on any non-handled route over `/sub` (`/sub/testing`) will be handled by `/sub/_fallback.ts`, but any other will be handled by `/_fallback.ts`.
+
+### `_*.ts`
+Any file that start with `_` and isn't a convention will be ignored.
+
+```diff
+  routes
+  | sub
+- | | _route.ts
+- | | _ignored.ts
+  | _index.ts
+```
+
+There is just one endpoint, the root index `/`, because `/sub/_ignored` and `/sub/_route` are ignored.
+
